@@ -1,6 +1,15 @@
     /* 명령형 매개변수란?
      * public static void main(String[] args) 에서 args가 명령행 매개변수임
      * args란 String 타입의 배열 주소를 가지는 변수.
+     * 
+     * cmd에서, .java 파일을 실행하면서 전달하는 문자열들이 저장된 배열의 주솟값을 가짐
+     * ex) C:\> java Test apple banana lemon 명령 시
+     * apple banana lemon 문자열을 요소로 가지는 String 타입의 배열이 생성되고,
+     * 이 배열의 시작 주소가 main() 함수의 명령행 매개변수 args에 저장됨.
+     * 그래서 for(int i = 0; i < args.length; i++) {
+     *  System.out.println(args[i]); } 로 위 문자열 출력 가능.
+     *
+     *  사실 잘 모르겠음 걍 뭔소린지 이해 못함
      *
      *
      *
