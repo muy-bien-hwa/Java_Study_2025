@@ -1,7 +1,9 @@
-    /* 명령형 매개변수란?
+/** 명령행 매개변수와 psvm의 기초 + 메서드, 클래스 형식 기초 */
+
+/* 명령행 매개변수란?
      * public static void main(String[] args) 에서 args가 명령행 매개변수임
      * args란 String 타입의 배열 주소를 가지는 변수.
-     * 
+     *
      * cmd에서, .java 파일을 실행하면서 전달하는 문자열들이 저장된 배열의 주솟값을 가짐
      * ex) C:\> java Test apple banana lemon 명령 시
      * apple banana lemon 문자열을 요소로 가지는 String 타입의 배열이 생성되고,
@@ -19,7 +21,8 @@
      * = JVM이 공식적으로 찾는 main()의 형태임.
      *
      * public = JVM이 어디서든 이 매서드를 실행할 수 있도록 공개함.
-     * 반대로 private 하면, 같은 클래스 안에서만 접근 가능
+     * 반대로 private 하면, 같은 클래스 안에서만 접근 가능, (defalut) 값은 같은 패키지 안에서만 접근 가능임.
+     * protected는 같은 패키지 안에서만 접근 가능이지만, 다른 패키지와 상속 관계로 연결되어 있을 때는 그 패키지에서 접근 가능.
      * 하나의 .java 파일에 클래스 여러 개 있어도 되지만, public 클래스는 딱 하나여야 함.
      * 또한 파일 이름은 public 클래스의 이름과 똑같아야 함.
      *
@@ -27,6 +30,7 @@
      * static = (붙이거나, 안붙이거나) 객체 없이 바로 실행 가능
      * 즉, static 없는 매서드('인스턴스 매서드' 라고 함)
      */
+
 class Test {
     void hello() {  // hello 라는 함수(X) 매서드(O)
         System.out.println("hello");
