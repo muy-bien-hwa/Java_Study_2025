@@ -1,3 +1,5 @@
+/** 데이터 타입 기초 */
+
 public class FTJB_dataType {
     public static void main(String[] args) {
         int g = 23;
@@ -22,3 +24,4 @@ public class FTJB_dataType {
         // 이런식으로 응용 가능
     }
 }
+
