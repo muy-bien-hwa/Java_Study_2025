@@ -1,3 +1,5 @@
+/** 객체와 클래스 기초 */
+
 /* 객체는 속성과 동작으로 이루어져있다.
  * 클래스는 이러한 객체를 만드는 틀.
  *
@@ -38,3 +40,4 @@ public class FTJB_객체와_클래스에_관한_고찰 {
         System.out.print(isMissile ? "Yes" : "No"); // isMissile이 false이기 때문에 "No"
     }
 }
+
