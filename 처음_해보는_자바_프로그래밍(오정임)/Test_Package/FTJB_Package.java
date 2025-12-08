@@ -1,4 +1,7 @@
 package Test_Package;
+
+/** 패키지와 외부 패키지(+외부 클래스) import 방법 */
+
 /*
  * 이러면 이 클래스는 Test_Package에 속하게 됨
  *
