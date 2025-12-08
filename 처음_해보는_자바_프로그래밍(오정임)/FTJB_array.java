@@ -1,7 +1,7 @@
 public class FTJB_array {
-    /**
-     * 처음 해보는 자바 프로그래밍(오정임) 책 참고
-     */
+    /** 처음 해보는 자바 프로그래밍(오정임) 책 참고
+     * 배열 기초
+     * */
 
     public static void main(String[] args) {
         int[] arr1 = {10,20,30,40,50};
@@ -20,3 +20,4 @@ public class FTJB_array {
         // 출력 시 arr3 의 요소를 num에 넣어서 출력
     }
 }
+
