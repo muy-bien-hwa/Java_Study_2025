@@ -1,3 +1,5 @@
+/** 다차원 배열 기초 + 가변 배열 */
+
 import java.util.Arrays; // Arrays 클래스 들고오기
 
 public class FTJB_multiArray {
@@ -20,3 +22,4 @@ public class FTJB_multiArray {
         }
     }
 }
+
