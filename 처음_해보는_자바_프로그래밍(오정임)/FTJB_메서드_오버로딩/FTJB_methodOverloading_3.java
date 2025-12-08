@@ -8,6 +8,13 @@ package FTJB_메서드_오버로딩;
  * void test(int a, int b) {}
  * ... 이런 식으로 설계할 수도 있겠지만, 더 간결하게 하려면 "가변 길이 인자" 를 사용하면 됨
  * 메서드 이름(데이터 타입... 변수명) {} 으로 사용 가능
+ *
+ * 가변 길이 인자 사용 시 주의 사항
+ * 1. 가변 길이 인자 매개변수와 다른 매개변수를 함께 사용할 때는, 가변 길이 인자 매개변수가 제일 마지막에 선언되어야 함.
+ *      ex) void test(String name, int... x, double sum) => (X) 불가능.
+ *          void test(String name, double sum, int... x) => (O) 이런 식으로.
+ * 2. 가변 길이 인자 매개변수는 한 번만 선언 가능. 
+ *      ex) void test(int... x, double... y)  =>  (X) 불가능
  */
 
 import java.util.Arrays;
@@ -47,3 +54,4 @@ public class FTJB_methodOverloading_3 {
         test("점수", 98, 100, 87);
     }
 }
+
