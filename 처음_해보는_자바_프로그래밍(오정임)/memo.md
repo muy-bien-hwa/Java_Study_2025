@@ -133,7 +133,7 @@ public int sum(int data1, int data2) {
 → 사용하는 법
   : 그냥 static 붙이면 됨.
 
-```
+```java
 static int totalCount;  // static 정수형 변수
 
 public static void print1() {
@@ -155,7 +155,7 @@ static {
 
 JVM의 클래스 로더는 **main() 메서드가 시작되기 전** 에 로딩된 모든 클래스 코드를 살펴보고, static으로 선언된 정적 멤버를 메모리의 코드 영역에 할당함.  
 
-```
+```java
 class Count {
   public static int totalCount;    // totalCount 라는 정수형 변수 정적 멤버를 만듦. 얘는 코드 영역에 저장됨.
   int count;
@@ -175,8 +175,43 @@ Count라는 인스턴스가 생성되면, static인 totalCount는 힙 메모리�
  => static으로 선언한 필드를 **"클래스 필드"**, 그렇지 않은 필드를 **"인스턴스 필드"** 라고 함.  
 
 
-#### ▷ 클래스 필드의 사용
+### ▷ 클래스 필드의 사용
 클래스 필드는 참조변수가 필요 없음.  
   => main() 메서드 실행 전에 이미 코드 메모리에 생성되어있기 때문.  
 객체 생성 없이 바로 *클래스명.필드명* 으로 접근 가능.  
+
+위 코드에서,
+```java
+class Count { ... }
+public class CountTest {
+  public static void main(String[] args) {
+    Count.totalCount++;      // 오류 안남. 클래스 필드 값이기 때문.
+    Count.count++;           // 오류 남. 인스턴스 필드 값이기 때문. 사용하려면 인스턴스 생성하고 사용.
+}
+```
+예제를 살펴봅시다~~  
+```java
+class Count { ... }
+public class CountTest {
+  public static void main(String[] args) {
+    Count c1 = new Count();
+    Count c2 = new Count();
+    Count c3 = new Count();
+
+    c1.count++;
+    Count.totalCount++;
+    c2.count++;
+    Count.totalCount++;
+    c3.count++;
+    Count.totalCount++;
+
+    System.out.println("c1:" + c1.count + " c2:" + c2.count + " c3:" + c3.count + " total:" + Count.totalCount);
+  }
+}
+```
+위 코드 실행 시 나오는 값은 아래와 같다.
+```java
+c1:1 c2:1 c3:1 total:3
+```
+    
 
