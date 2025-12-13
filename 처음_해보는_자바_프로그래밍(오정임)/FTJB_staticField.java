@@ -12,7 +12,7 @@ class Count{
     int count;
 }
 
-public class FTJB_static_field {
+public class FTJB_staticField {
     public static void main(String[] args) {
         Count.totalCount++; // 정상. static 선언을 한 클래스 필드이기 때문에 바로 접근 가능.
         // count++; -> 에러, 인스턴스 필드이기 때문에 인스턴스를 먼저 생성해줘야 함.
@@ -38,3 +38,4 @@ public class FTJB_static_field {
         // c1 : 1  c2 : 1  c3 : 1  total : 5
     }
 }
+
